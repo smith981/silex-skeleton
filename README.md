@@ -1,0 +1,4 @@
+silex-skeleton
+==============
+
+Silex Skeleton
