@@ -1,0 +1,17 @@
+{
+    "name": "smith981/silex-skeleton",
+    "description": "A working skeleton for rapidly building a Silex site.",
+    "authors": [
+        {
+            "name": "Ed Smith",
+            "email": "smith981@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+    	"php": ">=5.3",
+        "silex/silex": "1.0.*",
+        "taluu/doctrine-orm-provider": "1.0.*",
+        "twig/twig": "1.12.*"
+    }
+}
