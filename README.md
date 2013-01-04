@@ -1,7 +1,7 @@
 silex-skeleton
 ==============
 
-This is a working skeleton used to rapidly develop a new Silex site.
+This is a working skeleton used to rapidly develop a new Silex site, with Twitter Bootstrap, Twig, and a Doctrine ORM provider installed and registered.
 
 ###Included Packages
 * Twig 1.12 (twig/twig)
