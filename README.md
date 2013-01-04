@@ -8,11 +8,16 @@ This is a working skeleton used to rapidly develop a new Silex site, with Twitte
 * Doctrine ORM Provider (taluu/doctrine-orm-provider)
 * Twitter Bootstrap installed is in 'web' directory. The requisite CSS and JS includes are in the views/base.twig.html template. Extend the base template in other Twig files if you want to use Bootstrap.
 
-###Installation
-1. From the silex-skeleton directory:
+###Installation using [Composer](http://getcomposer.org)
+1. From the web root:
 ```
-php composer.phar install
+composer create-project --stability="dev" smith981/silex-skeleton silex
 ```
+2. Or, if you haven't renamed composer.phar
+```
+php composer.phar create-project --stability="dev" smith981/silex-skeleton silex
+```
+This will create the installation in the 'silex' directory.
 2. Change the title in views/base.twig.html so that it shows your site name.
 3. If you need a database, open index.php and uncomment the lines that register Doctrine DBAL and edit the connection parameters there.
 4. Create your routes as needed in index.php, and your views in the 'views' directory.
