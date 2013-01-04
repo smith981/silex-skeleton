@@ -13,10 +13,10 @@ This is a working skeleton used to rapidly develop a new Silex site, with Twitte
 ```
 composer create-project --stability="dev" smith981/silex-skeleton silex
 ```
-2. Or, if you haven't renamed composer.phar
+2. Or, if you haven't renamed composer.phar:
 ```
 php composer.phar create-project --stability="dev" smith981/silex-skeleton silex
-```
+```  
 This will create the installation in the 'silex' directory.
 2. Change the title in views/base.twig.html so that it shows your site name.
 3. If you need a database, open index.php and uncomment the lines that register Doctrine DBAL and edit the connection parameters there.
