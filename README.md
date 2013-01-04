@@ -10,11 +10,9 @@ This is a working skeleton used to rapidly develop a new Silex site.
 
 ###Installation
 1. From the silex-skeleton directory:
-
 ```
 php composer.phar install
 ```
-
 2. Change the title in views/base.twig.html so that is shows your site name.
 3. If you need a database, open index.php and uncomment the lines that register Doctrine DBAL and edit the connection parameters there.
 4. Create your routes as needed in index.php, and your views in the 'views' directory.
