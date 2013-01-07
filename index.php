@@ -15,7 +15,7 @@ $app = new Silex\Application;
 //$app['debug'] = true;
 
 /**
- *Register Doctrine DBAL if needed
+ * Register Doctrine DBAL if needed
  */
 /*
 $app->register(new Silex\Provider\DoctrineServiceProvider(), array(
@@ -50,6 +50,24 @@ $app['controllers']
 /**
  * Register URL handlers here. Specific routes must come first, and most general come later!
  */ 
+
+/**
+ * Route for Page 2 (a sample page)
+ */
+$app->get('/page2', function() use($app) { 
+    /**
+     * Execute a query, if needed
+     */
+    //$sql = 'select * from blah where field1 = ?';
+    //$data = $app['db']->executeQuery($sql, array('somevalue'));
+    //$response = $app['twig']->render('home.twig.html'); //use this line and comment the next one when we no longer need the "coming soon" page
+    $response = $app['twig']->render('page2.twig.html'); //$data would be in the second param array, if needed
+    return $response;
+});
+
+/**
+ * ...other routes go here
+ */
 
 /**
  * Route for Home page
