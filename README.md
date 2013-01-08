@@ -22,6 +22,8 @@ This will create the installation in the 'silex' directory.
 3. If you need a database, open index.php and uncomment the lines that register Doctrine DBAL and edit the connection parameters there.
 4. Create your routes as needed in index.php, and your views in the 'views' directory.
 
-**Package includes *.htaccess* used for removing 'index.php' from url!**
+**Package includes *.htaccess* used for removing 'index.php' from url!** Be sure .htaccess overrides are allowed by your httpd.conf settings.
+
+I have not attempted to run this under IIS, pull requests are welcome on this.
 
 For examples, see comments in index.php.
