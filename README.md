@@ -50,7 +50,7 @@ $app->register(new Silex\Provider\DoctrineServiceProvider(), array(
   		'user'     => 'username',
   		'password' => 'pass',
   		'dbname'   => 'dbname',
-  		'host'	 => 'localhost'
+  		'host'	   => 'localhost'
   	)
 ));
 ```
@@ -76,11 +76,11 @@ Just plug your connection parameters into /bin/boostrap_doctrine.php. Everything
  * database configuration parameters for Doctrine console
  */
 $conn = array(
-    'driver' => 'pdo_mysql',
-    'dbname' => 'test',
-    'user' => 'testuser',
+    'driver'   => 'pdo_mysql',
+    'dbname'   => 'test',
+    'user'     => 'testuser',
     'password' => 'secret',
-    'host' => 'localhost',
+    'host'     => 'localhost',
 );
 ```
 
