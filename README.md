@@ -59,7 +59,7 @@ $app->register(new Silex\Provider\DoctrineServiceProvider(), array(
 The doctrine console is located in '/bin'
 ```
 cd bin
-doctrine
+./doctrine
 ```
 
 ### Super-Quick Console Configuration
@@ -97,12 +97,12 @@ The three sample entities from the [Doctrine 2 documentation](http://docs.doctri
 To remove the sample entities, delete those files and recreate the schema:  
 ```
 cd bin
-doctrine orm:schema-tool:drop --force
-doctrine orm:schema-tool:create
+./doctrine orm:schema-tool:drop --force
+./doctrine orm:schema-tool:create
 ```
 
 Add your own entity files in /entities and create or update the schema:  
 ```
-doctrine orm:schema-tool:update
+./doctrine orm:schema-tool:update
 ```
 
