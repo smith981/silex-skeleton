@@ -27,3 +27,8 @@ This will create the installation in the 'silex' directory.
 I have not attempted to run this under IIS, pull requests are welcome on this.
 
 For examples, see comments in index.php.
+
+### Doctrine Console  
+```
+bin/doctrine
+```
