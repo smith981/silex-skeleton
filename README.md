@@ -89,7 +89,7 @@ $conn = array(
 While you are welcome to simply use the Doctrine DBAL, the Doctrine ORM is available as well.
 
 ### Entities
-By default, this package supports mapping info via annotations. See [Doctrine 2 documentation](http://docs.doctrine-project.
+By default, this package supports mapping info via annotations. See [Doctrine 2 documentation](http://docs.doctrine-project.org/en/latest/tutorials/getting-started.html)
 
 Your entity models go in /entities. *Any .php file in that directory will be included automatically.*
 The three sample entities from the [Doctrine 2 documentation](http://docs.doctrine-project.org/en/latest/tutorials/getting-started.html) are included.
