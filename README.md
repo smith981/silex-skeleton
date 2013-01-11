@@ -29,6 +29,46 @@ I have not attempted to run this under IIS, pull requests are welcome on this.
 For examples, see comments in index.php.
 
 ### Doctrine Console  
+The doctrine console is located in '/bin'
 ```
-bin/doctrine
+cd bin
+doctrine
+```
+
+### Super-Quick Console Configuration
+Just plug your connection parameters into /bin/boostrap_doctrine.php. Everything else is done!
+
+~~~
+<?php
+
+// /bin/bootstrap_doctrine.php
+
+/**
+ * database configuration parameters for Doctrine console
+ */
+$conn = array(
+    'driver' => 'pdo_mysql',
+    'dbname' => 'test',
+    'user' => 'testuser',
+    'password' => 'secret',
+    'host' => 'localhost',
+);
+~~~
+
+### Entities
+By default, this package supports mapping info via annotations. See [Doctrine 2 documentation](http://docs.doctrine-project.
+
+Your entity models go in /entities. Any .php file in that directory will be included automatically.
+The three sample entities from the [Doctrine 2 documentation](http://docs.doctrine-project.org/en/latest/tutorials/getting-started.html) are included.
+
+To remove the sample entities, delete those files and recreate the schema:  
+```
+cd bin
+doctrine orm:schema-tool:drop --force
+doctrine orm:schema-tool:create
+```
+
+Add your own entity files in /entities and create or update the schema:  
+```
+doctrine orm:schema-tool:update
 ```
