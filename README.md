@@ -10,11 +10,11 @@ This is a working skeleton used to rapidly develop a new Silex site, with Twitte
 
 ###Installation using [Composer](http://getcomposer.org)
 1. From the web root:
-```
+```linux
 composer create-project --stability="dev" smith981/silex-skeleton silex
 ```
 2. Or, if you haven't renamed composer.phar:
-```
+```linux
 php composer.phar create-project --stability="dev" smith981/silex-skeleton silex
 ```  
 This will create the installation in the 'silex' directory.
@@ -32,7 +32,7 @@ For examples, see comments in index.php.
 
 Uncomment the following code in /index.php and set your database parameters:
 
-~~~
+```php
 <?php
 
 // /index.php
@@ -53,11 +53,11 @@ $app->register(new Silex\Provider\DoctrineServiceProvider(), array(
   		'host'	 => 'localhost'
   	)
 ));
-~~~
+```
 
 ### Doctrine Console  
 The doctrine console is located in '/bin'
-```
+```linux
 cd bin
 doctrine
 ```
@@ -65,7 +65,7 @@ doctrine
 ### Super-Quick Console Configuration
 Just plug your connection parameters into /bin/boostrap_doctrine.php. Everything else is done!
 
-~~~
+```php
 <?php
 
 // /bin/bootstrap_doctrine.php
@@ -82,7 +82,7 @@ $conn = array(
     'password' => 'secret',
     'host' => 'localhost',
 );
-~~~
+```
 
 ## Using the Doctrine ORM
 
@@ -95,13 +95,13 @@ Your entity models go in /entities. *Any .php file in that directory will be inc
 The three sample entities from the [Doctrine 2 documentation](http://docs.doctrine-project.org/en/latest/tutorials/getting-started.html) are included.
 
 To remove the sample entities, delete those files and recreate the schema:  
-```
+```linux
 cd bin
 doctrine orm:schema-tool:drop --force
 doctrine orm:schema-tool:create
 ```
 
 Add your own entity files in /entities and create or update the schema:  
-```
+```linux
 doctrine orm:schema-tool:update
 ```
