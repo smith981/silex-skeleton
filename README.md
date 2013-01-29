@@ -1,6 +1,8 @@
 silex-skeleton
 ==============
 
+**Update:** I am having difficulty getting the Doctrine ORM provider to work. However, using the DBAL everything works fine.
+
 This is a working skeleton used to rapidly develop a new Silex site, with Twitter Bootstrap, Twig, and a Doctrine ORM provider installed and registered.
 
 ###Included Packages
