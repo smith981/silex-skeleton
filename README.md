@@ -1,7 +1,7 @@
 silex-skeleton
 ==============
 
-**Update:** I am having difficulty getting the Doctrine ORM provider to work. However, using the DBAL everything works fine.
+**Update:** The new Doctrine ORM provider works now.
 
 This is a working skeleton used to rapidly develop a new Silex site, with Twitter Bootstrap, Twig, and a Doctrine ORM provider installed and registered.
 
@@ -48,7 +48,7 @@ $app->register(new Silex\Provider\DoctrineServiceProvider(), array(
 
     // Doctrine DBAL settings goes here
     'db.options' => array(
-      	'driver'   => 'pdo_mysql',
+          'driver'   => 'pdo_mysql',
   		'user'     => 'username',
   		'password' => 'pass',
   		'dbname'   => 'dbname',
