@@ -1,5 +1,7 @@
 <?php
 // entities/Bug.php
+
+namespace Sample;
 /**
  * @Entity @Table(name="bugs")
  **/

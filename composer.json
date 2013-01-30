@@ -7,11 +7,13 @@
             "email": "smith981@gmail.com"
         }
     ],
-    "minimum-stability": "dev",
     "require": {
-    	"php": ">=5.3",
-        "silex/silex": "1.0.*",
-        "taluu/doctrine-orm-provider": "1.0.*",
+        "php": ">=5.3",
+        "silex/silex": "1.0.*@dev",
+        "dflydev/doctrine-orm-service-provider": "1.0.*@dev",
         "twig/twig": "1.12.*"
+    },
+    "autoload": {
+        "psr-0": { "": "entities/"}
     }
 }
