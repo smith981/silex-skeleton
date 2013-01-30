@@ -1,0 +1,14 @@
+{% extends "base.twig.html" %}
+{% block content %}
+<h2>Users</h2>
+<table class="table table-condensed table-hover">
+	<tr>
+		<td><strong>ID</strong></td><td><strong>Name</strong></td>
+	</tr>
+{% for user in users %}
+	<tr>
+		<td>{{ user.id }}</td><td>{{ user.name }}</td>
+	</tr>
+{% endfor %}
+</table>
+{% endblock %}
