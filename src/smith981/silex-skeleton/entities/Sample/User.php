@@ -2,6 +2,7 @@
 // entities/User.php
 
 namespace Sample;
+
 /**
  * @Entity @Table(name="users")
  **/
@@ -79,7 +80,7 @@ class User
      * @param \Bug $reportedBugs
      * @return User
      */
-    public function addReportedBug(\Bug $reportedBugs)
+    public function addReportedBug(Bug $reportedBugs)
     {
         $this->reportedBugs[] = $reportedBugs;
     
@@ -91,7 +92,7 @@ class User
      *
      * @param \Bug $reportedBugs
      */
-    public function removeReportedBug(\Bug $reportedBugs)
+    public function removeReportedBug(Bug $reportedBugs)
     {
         $this->reportedBugs->removeElement($reportedBugs);
     }
@@ -112,7 +113,7 @@ class User
      * @param \Bug $assignedBugs
      * @return User
      */
-    public function addAssignedBug(\Bug $assignedBugs)
+    public function addAssignedBug(Bug $assignedBugs)
     {
         $this->assignedBugs[] = $assignedBugs;
     
@@ -124,7 +125,7 @@ class User
      *
      * @param \Bug $assignedBugs
      */
-    public function removeAssignedBug(\Bug $assignedBugs)
+    public function removeAssignedBug(Bug $assignedBugs)
     {
         $this->assignedBugs->removeElement($assignedBugs);
     }

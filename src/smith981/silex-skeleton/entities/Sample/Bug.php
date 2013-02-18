@@ -2,6 +2,7 @@
 // entities/Bug.php
 
 namespace Sample;
+
 /**
  * @Entity @Table(name="bugs")
  **/
@@ -132,7 +133,7 @@ class Bug
      * @param \User $engineer
      * @return Bug
      */
-    public function setEngineer(\User $engineer = null)
+    public function setEngineer(User $engineer = null)
     {
         $this->engineer = $engineer;
     
@@ -155,7 +156,7 @@ class Bug
      * @param \User $reporter
      * @return Bug
      */
-    public function setReporter(\User $reporter = null)
+    public function setReporter(User $reporter = null)
     {
         $this->reporter = $reporter;
     
@@ -178,7 +179,7 @@ class Bug
      * @param \Product $products
      * @return Bug
      */
-    public function addProduct(\Product $products)
+    public function addProduct(Product $products)
     {
         $this->products[] = $products;
     
@@ -190,7 +191,7 @@ class Bug
      *
      * @param \Product $products
      */
-    public function removeProduct(\Product $products)
+    public function removeProduct(Product $products)
     {
         $this->products->removeElement($products);
     }

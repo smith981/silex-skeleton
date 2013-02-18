@@ -7,13 +7,22 @@
             "email": "smith981@gmail.com"
         }
     ],
+    "repositories": [
+    {
+        "type": "composer",
+        "url": "https://packages.zendframework.com/"
+    }
+    ],
     "require": {
         "php": ">=5.3",
         "silex/silex": "1.0.*@dev",
         "dflydev/doctrine-orm-service-provider": "1.0.*@dev",
-        "twig/twig": "1.12.*"
+        "twig/twig": "1.12.*",
+        "zendframework/zend-code": "2.*",
+        "smith981/form-generator": "dev-master"
     },
     "autoload": {
         "psr-0": { "": "entities/"}
-    }
+    },
+    "minimum-stability": "dev"
 }

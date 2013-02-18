@@ -2,6 +2,7 @@
 // entities/Product.php
 
 namespace Sample;
+
 /**
  * @Entity @Table(name="products")
  **/

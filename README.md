@@ -1,14 +1,13 @@
 silex-skeleton
 ==============
 
-**Update:** The new Doctrine ORM provider works now.
-
-This is a working skeleton used to rapidly develop a new Silex site, with Twitter Bootstrap, Twig, and a Doctrine ORM provider installed and registered.
+This is a working skeleton used to rapidly develop a new Silex site, with Twitter Bootstrap, Twig, and a Doctrine ORM provider installed and registered. It also includes the Doctrine console and a CRUD generator in the /bin directory, which uses components from Zend Framework 2.x.
 
 ###Included Packages
 * Twig 1.12 (twig/twig)
 * Doctrine ORM Provider (taluu/doctrine-orm-provider)
 * Twitter Bootstrap installed is in 'web' directory. The requisite CSS and JS includes are in the views/base.twig.html template. Extend the base template in other Twig files if you want to use Bootstrap.
+* Zend/Form
 
 ###Installation using [Composer](http://getcomposer.org)
 1. From the web root:
@@ -20,9 +19,9 @@ composer create-project --stability="dev" smith981/silex-skeleton silex
 php composer.phar create-project --stability="dev" smith981/silex-skeleton silex
 ```  
 This will create the installation in the 'silex' directory.
-2. Change the title in views/base.twig.html so that it shows your site name.
+2. Change the title in src/smith981/silex-skeleton/views/base.twig.html so that it shows your site name.
 3. If you need a database, open index.php and uncomment the lines that register Doctrine DBAL and edit the connection parameters there.
-4. Create your routes as needed in index.php, and your views in the 'views' directory.
+4. Create your routes as needed in index.php, and your views in the src/smith981/silex-skeleton/views.
 
 **Package includes *.htaccess* used for removing 'index.php' from url!** Be sure .htaccess overrides are allowed by your httpd.conf settings.
 
@@ -103,7 +102,7 @@ cd bin
 ./doctrine orm:schema-tool:create
 ```
 
-Add your own entity files in /entities and create or update the schema:  
+Add your own entity files in /src/smith981/silex-skeleton/entities and create or update the schema:  
 ```
 ./doctrine orm:schema-tool:update
 ```
