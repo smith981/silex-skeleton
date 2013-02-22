@@ -2,6 +2,7 @@
 // entities/Bug.php
 
 namespace Sample;
+use Zend\Form\Annotation;
 
 /**
  * @Entity @Table(name="bugs")
@@ -9,18 +10,22 @@ namespace Sample;
 class Bug
 {
     /**
+     * @Annotation\Exclude
      * @Id @Column(type="integer") @GeneratedValue
      **/
     protected $id;
     /**
+     * @Annotation\Type("Zend\Form\Element\Textarea")
      * @Column(type="string")
      **/
     protected $description;
     /**
+     * @Annotation\Exclude
      * @Column(type="datetime")
      **/
     protected $created;
     /**
+     * @Annotation\Type("Zend\Form\Element\Text")
      * @Column(type="string")
      **/
     protected $status;

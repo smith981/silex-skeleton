@@ -2,15 +2,24 @@
 // entities/Product.php
 
 namespace Sample;
+use Zend\Form\Annotation;
 
 /**
  * @Entity @Table(name="products")
  **/
 class Product
 {
-    /** @Id @Column(type="integer") @GeneratedValue **/
+    /** 
+     * @Annotation\Exclude
+     * @Id @Column(type="integer") 
+     * @GeneratedValue 
+     */
     protected $id;
-    /** @Column(type="string") **/
+
+    /** 
+     * @Annotation\Text
+     * @Column(type="string") 
+     */
     protected $name;
 
 

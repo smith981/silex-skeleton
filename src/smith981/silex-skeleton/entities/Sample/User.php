@@ -2,6 +2,7 @@
 // entities/User.php
 
 namespace Sample;
+use Zend\Form\Annotation;
 
 /**
  * @Entity @Table(name="users")

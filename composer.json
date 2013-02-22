@@ -22,7 +22,9 @@
         "smith981/form-generator": "dev-master"
     },
     "autoload": {
-        "psr-0": { "": "entities/"}
+        "psr-0": { 
+            "": "src/"
+        }
     },
     "minimum-stability": "dev"
 }

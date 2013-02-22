@@ -1,6 +1,6 @@
 <?php
 
-namespace smith981\silex-skeleton;
+namespace smith981\SilexSkeleton;
 
 /**
  * PHPUnit unit tests - run with "php ..\vendor\EHER\PHPUnit\bin\phpunit [this filename, no brackets]" 
@@ -23,7 +23,9 @@ class CrudTest extends \PHPUnit_Framework_TestCase
 	 * @return type
 	 */
 	public function setUp() {
-		require_once('../src/entities/Sample/Bug.php');
+		require_once('../src/smith981/silex-skeleton/entities/Sample/Bug.php');
+		require_once('../src/smith981/silex-skeleton/entities/Sample/Product.php');
+		require_once('../src/smith981/silex-skeleton/entities/Sample/User.php');
 	}
 
 	/**
@@ -43,7 +45,7 @@ class CrudTest extends \PHPUnit_Framework_TestCase
 	public function testGenerateFromReflection() {
 		$reflection = new \Zend\Code\Reflection\FileReflection('../src/smith981/silex-skeleton/entities/Sample/Bug.php');
 
-		$createForm = \smith981\FormGenerator::generateCreateFormFromFileReflection($reflection);
+		$createForm = \smith981\FormGenerator\FormGenerator::generateCreateFormFromFileReflection($reflection);
 
 		/**
 		 * @todo add methods for retrieveById, update, delete
