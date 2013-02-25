@@ -10,7 +10,7 @@ Setup::registerAutoloadPEAR();
 // Create a simple "default" Doctrine ORM configuration for XML Mapping
 $isDevMode = true;
 
-$config = Setup::createAnnotationMetadataConfiguration(array(__DIR__."/../entities"), $isDevMode);
+$config = Setup::createAnnotationMetadataConfiguration(array(__DIR__."/../src/smith981/silex-skeleton/entities"), $isDevMode);
 
 /**
  * database configuration parameters for Doctrine console

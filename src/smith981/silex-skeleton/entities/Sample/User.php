@@ -10,28 +10,18 @@ use Zend\Form\Annotation;
 class User
 {
     /**
+     * @Annotation\Exclude
      * @Id @GeneratedValue @Column(type="integer")
      * @var int
      **/
     protected $id;
 
     /**
+     * @Annotation\Type("Zend\Form\Element\Text")
      * @Column(type="string")
      * @var string
      **/
     protected $name;
-
-    /**
-     * @OneToMany(targetEntity="Bug", mappedBy="reporter")
-     * @var Bug[]
-     **/
-    protected $reportedBugs = null;
-
-    /**
-     * @OneToMany(targetEntity="Bug", mappedBy="engineer")
-     * @var Bug[]
-     **/
-    protected $assignedBugs = null;
 
     /**
      * Constructor
@@ -73,71 +63,5 @@ class User
     public function getName()
     {
         return $this->name;
-    }
-
-    /**
-     * Add reportedBugs
-     *
-     * @param \Bug $reportedBugs
-     * @return User
-     */
-    public function addReportedBug(Bug $reportedBugs)
-    {
-        $this->reportedBugs[] = $reportedBugs;
-    
-        return $this;
-    }
-
-    /**
-     * Remove reportedBugs
-     *
-     * @param \Bug $reportedBugs
-     */
-    public function removeReportedBug(Bug $reportedBugs)
-    {
-        $this->reportedBugs->removeElement($reportedBugs);
-    }
-
-    /**
-     * Get reportedBugs
-     *
-     * @return \Doctrine\Common\Collections\Collection 
-     */
-    public function getReportedBugs()
-    {
-        return $this->reportedBugs;
-    }
-
-    /**
-     * Add assignedBugs
-     *
-     * @param \Bug $assignedBugs
-     * @return User
-     */
-    public function addAssignedBug(Bug $assignedBugs)
-    {
-        $this->assignedBugs[] = $assignedBugs;
-    
-        return $this;
-    }
-
-    /**
-     * Remove assignedBugs
-     *
-     * @param \Bug $assignedBugs
-     */
-    public function removeAssignedBug(Bug $assignedBugs)
-    {
-        $this->assignedBugs->removeElement($assignedBugs);
-    }
-
-    /**
-     * Get assignedBugs
-     *
-     * @return \Doctrine\Common\Collections\Collection 
-     */
-    public function getAssignedBugs()
-    {
-        return $this->assignedBugs;
     }
 }

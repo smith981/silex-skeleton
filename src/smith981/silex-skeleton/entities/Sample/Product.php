@@ -17,7 +17,7 @@ class Product
     protected $id;
 
     /** 
-     * @Annotation\Text
+     * @Annotation\Type("Zend\Form\Element\Text")
      * @Column(type="string") 
      */
     protected $name;

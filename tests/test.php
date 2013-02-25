@@ -2,6 +2,7 @@
 
 namespace smith981\SilexSkeleton;
 
+
 /**
  * PHPUnit unit tests - run with "php ..\vendor\EHER\PHPUnit\bin\phpunit [this filename, no brackets]" 
  * 
